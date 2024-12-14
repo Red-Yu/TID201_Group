@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #153243; */
+  background-color: black;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.main_container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.main_container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.07);
+  /* width: 100%; */
+  height: 100%;
+  object-fit: contain;
+  /* box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3); */
+  transition: transform 0.1s ease-out; /* 為每個圖片增加平滑過渡效果 */
+}
+
+.main_container .img_hover {
+  opacity: 0;
+}
+
+.parallax-wrapper .skyCity {
+  animation: bounce 4s ease-in-out infinite; /* 上下浮動動畫 */
+}
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) scale(0.97); /* 初始位置，保持置中 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px) scale(0.98); /* 上移 10px */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) scale(0.97); /* 返回初始位置 */
+  }
+}
+
+.parallax-wrapper .cloud_left {
+  animation: moveCloud 4s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, -3px); /* 開始時向左偏移 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(6px, 1px); /* 移動到右邊 */
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0px, -3px); /* 返回到左邊 */
+  }
+}
+
+.parallax-wrapper .cloud_right {
+  animation: moveCloud2 3.7s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes moveCloud2 {
+  0% {
+    transform: translate(-50%, -50%) translate(-3px, 3px); /* 開始時向左偏移 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(3px, -1px); /* 移動到右邊 */
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(-3px, 3px); /* 返回到左邊 */
+  }
+}
+
+.parallax-wrapper .sky {
+  animation: bounceSky 6s ease-in-out infinite; /* 上下浮動動畫 */
+}
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bounceSky {
+  0% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.parallax-wrapper .base {
+  animation: scaleBase 8s ease-in-out infinite; /* 設定放大縮小的動畫 */
+}
+
+/* 定義放大縮小的動畫 */
+@keyframes scaleBase {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* 初始狀態，原始大小 */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.017); /* 中間狀態，放大 */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* 結束狀態，回到原始大小 */
+  }
+}
+
+.parallax-wrapper .pillar_left {
+  animation: movePillar 8s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movePillar {
+  0% {
+    transform: translate(-50%, -50%) translateX(-1px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(4px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-1px) scale(1.07);
+  }
+}
+
+.parallax-wrapper .pillar_right {
+  animation: movePillar2 8s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movePillar2 {
+  0% {
+    transform: translate(-50%, -50%) translateX(1px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(-4px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(1px) scale(1.07);
+  }
+}
+
+.parallax-wrapper .book,
+.parallax-wrapper .boy,
+.parallax-wrapper .lamp,
+.parallax-wrapper .platform {
+  animation: bouncePlatform 8s ease-in-out infinite; /* 上下浮動動畫 */
+}
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bouncePlatform {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-2px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px) scale(1.07);
+  }
+}
+
+/*--------- hover area 的運用 -----------*/
+
+/* .hover_area {
+  position: absolute;
+  top: 0;
+  left: 350px;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  z-index: 2;
+}
+
+.hover_area:hover + .image {
+  opacity: 0;
+} */
+
+/* ---------------------------------- */

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <script src="./js/jquery-3.7.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+  <body>
+    <div class="wrapper">
+      <div class="main_container">
+        <div class="parallax-wrapper" data-depth="0.12">
+          <img src="./Assets/Day/day_base.png" alt="" class="base" />
+        </div>
+        <div class="parallax-wrapper" data-depth="0.1">
+          <img src="./Assets/Day/day_sky.png" alt="" class="sky" />
+        </div>
+        <div class="parallax-wrapper" data-depth="0.3">
+          <img
+            src="./Assets/Day/day_cloudLeft.png"
+            alt=""
+            class="cloud cloud_left"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.25">
+          <img
+            src="./Assets/Day/day_cloudRight.png"
+            alt=""
+            class="cloud cloud_right"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.1">
+          <img
+            src="./Assets/Day/day_skyCity_hover.png"
+            alt=""
+            class="skyCity img_hover"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.1">
+          <img src="./Assets/Day/day_skyCity.png" alt="" class="skyCity" />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.11">
+          <img
+            src="./Assets/Day/pillar_left_day.png"
+            alt=""
+            class="pillar pillar_left"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.11">
+          <img
+            src="./Assets/Day/pillar_right_day.png"
+            alt=""
+            class="pillar pillar_right"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img
+            src="./Assets/Day/platfrom_front_day.png"
+            alt=""
+            class="platform"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img
+            src="./Assets/Day/lamp_day_hover.png"
+            alt=""
+            class="lamp img_hover"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img src="./Assets/Day/lamp_day.png" alt="" class="lamp" />
+        </div>
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img
+            src="./Assets/Day/boy_day_hover.png"
+            alt=""
+            class="boy img_hover"
+          />
+        </div>
+
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img src="./Assets/Day/boy_day.png" alt="" class="boy" />
+        </div>
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img
+            src="./Assets/Day/book_day_hover.png"
+            alt=""
+            class="book img_hover"
+          />
+        </div>
+        <div class="parallax-wrapper" data-depth="0.05">
+          <img src="./Assets/Day/book_day.png" alt="" class="book" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var scene = document.querySelector(".main_container");
+        var parallaxInstance = new Parallax(scene, {
+          relativeInput: true, // 啟用相對滑鼠位置偏移
+          hoverOnly: true, // 只在滑鼠懸停時啟動 Parallax
+          originY: 0,
+          originX: 0.8,
+          scalarX: 5.5, // 水平方向移動幅度是滑鼠移動的一半
+          scalarY: 6.5, // 垂直方向移動幅度是滑鼠移動的一半
+        });
+      });
+
+      // if (typeof Parallax !== "undefined") {
+      //   console.log("Parallax 已加載");
+      // } else {
+      //   console.log("Parallax 未加載");
+      // }
+    </script>
+  </body>
+</html>
