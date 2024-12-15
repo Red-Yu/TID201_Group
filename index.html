@@ -73,7 +73,7 @@
         </div>
 
         <div class="parallax-wrapper" data-depth="0.05">
-          <div class="hoverAreaLamp"></div>
+          <a href="" class="hoverAreaLamp"></a>
           <img
             src="./Assets/Day/lamp_day_hover.png"
             alt=""
@@ -101,6 +101,8 @@
           <img src="./Assets/Day/boy_day.png" alt="" class="boy" />
         </div>
         <div class="parallax-wrapper" data-depth="0.05">
+          <a href="" class="hoverAreaBook"></a>
+
           <img
             src="./Assets/Day/book_day_hover.png"
             alt=""
@@ -131,6 +133,31 @@
       // } else {
       //   console.log("Parallax 未加載");
       // }
+
+      // ----------------hover 位移---------------------------
+
+      // 監聽視窗大小變化
+      window.addEventListener("resize", adjustHoverAreaPosition);
+
+      // 初始調整
+      adjustHoverAreaPosition();
+
+      function adjustHoverAreaPosition() {
+        // 獲取視窗的寬度
+        const windowWidth = window.innerWidth;
+
+        // 計算 hover 區域的 left 偏移量
+        // 這裡是基於視窗寬度的比例進行計算
+        let leftOffset = -20 + windowWidth * 0.03; // 根據視窗寬度調整，比例可以自己設置
+        let rightOffset = -25 + windowWidth * 0.03; // 根據視窗寬度調整，比例可以自己設置
+
+        // 這樣，隨著視窗寬度減小，hover區域的 left 也會逐漸減小
+        // 設置 hover 區域的位置
+        document.querySelector(".hoverAreaLamp").style.left = `${leftOffset}%`;
+        document.querySelector(
+          ".hoverAreaBook"
+        ).style.right = `${rightOffset}%`;
+      }
     </script>
   </body>
 </html>

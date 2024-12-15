@@ -24,7 +24,7 @@ body {
 }
 
 .parallax-wrapper {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -239,12 +239,35 @@ body {
   width: 9vw;
   height: 30vh;
   bottom: 5%;
-  right: 76%;
-  /* background-color: rgba(255, 255, 255, 0); */
-  background-color: #fff;
+  left: 18.6%;
+  background-color: rgba(255, 255, 255, 0);
+  /* background-color: #fff; */
   z-index: 101;
   pointer-events: auto;
   border-radius: 50%;
+  transition: left 0.3s ease-out; /* 增加平滑過渡 */
+}
+
+.hoverAreaLamp:hover + .lamp {
+  opacity: 1;
+}
+
+.hoverAreaBook {
+  position: absolute;
+  width: 26vw;
+  height: 22vh;
+  bottom: 3%;
+  right: 15%;
+  background-color: rgba(255, 255, 255, 0);
+  /* background-color: #fff; */
+  z-index: 101;
+  pointer-events: auto;
+  border-radius: 50%;
+  transition: left 0.3s ease-out; /* 增加平滑過渡 */
+}
+
+.hoverAreaBook:hover + .book {
+  opacity: 1;
 }
 
 /* -----------------HoverArea RWD------------------ */
@@ -265,8 +288,10 @@ body {
   }
 
   .hoverAreaLamp {
-    width: 9vw;
-    /* left: 18.8%; */
+    width: 10vw;
+  }
+  .hoverAreaBook {
+    width: 32vw;
   }
 }
 
