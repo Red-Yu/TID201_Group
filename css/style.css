@@ -193,6 +193,8 @@ body {
   top: 10%;
   left: 42%;
   background-color: rgba(255, 255, 255, 0);
+  /* background-color: #fff; */
+
   z-index: 101;
   pointer-events: auto;
   border-radius: 50%;
@@ -202,15 +204,69 @@ body {
   opacity: 1;
 }
 
-.hoverAreaBoy {
+.hoverAreaBoy1 {
+  position: absolute;
+  width: 9vw;
+  height: 40vh;
+  bottom: 5%;
+  left: 45%;
+  background-color: rgba(255, 255, 255, 0);
+  /* background-color: #fff; */
+  z-index: 101;
+  pointer-events: auto;
+  border-radius: 50%;
 }
 
-/* 螢幕寬度小於 1000px 時，增加大小 */
+.hoverAreaBoy2 {
+  position: absolute;
+  width: 30vw;
+  height: 20vh;
+  bottom: 3%;
+  left: 30%;
+  background-color: rgba(255, 255, 255, 0);
+  /* background-color: yellow; */
+  z-index: 101;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+
+.hoverAreaBoy:hover + .boy {
+  opacity: 1;
+}
+
+.hoverAreaLamp {
+  position: absolute;
+  width: 9vw;
+  height: 30vh;
+  bottom: 5%;
+  right: 76%;
+  /* background-color: rgba(255, 255, 255, 0); */
+  background-color: #fff;
+  z-index: 101;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+
+/* -----------------HoverArea RWD------------------ */
+
 @media (max-width: 1000px) {
   .hoverAreaSkyCity {
     width: 22vw;
     height: 40vh;
     left: 39%;
+  }
+  .hoverAreaBoy1 {
+    width: 11vw;
+    left: 44%;
+  }
+  .hoverAreaBoy2 {
+    width: 38vw;
+    left: 25%;
+  }
+
+  .hoverAreaLamp {
+    width: 9vw;
+    /* left: 18.8%; */
   }
 }
 
